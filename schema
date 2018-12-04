@@ -21,3 +21,9 @@ CREATE TABLE `Starbucks_Employees` (
  CREATE TABLE `Starbucks_Stores` (
   `store_id` int(11) NOT NULL,
   `city` varchar(255) DEFAULT NULL);
+
+ CREATE TABLE `Customer` (
+  `ID` int(11) NOT NULL,
+  `Name` varchar(255) DEFAULT NULL,
+   `cust_id` varchar(255) DEFAULT NULL,
+  `Industry Type` varchar(255) DEFAULT NULL);
