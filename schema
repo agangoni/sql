@@ -1,0 +1,23 @@
+CREATE TABLE `Salesperson` (
+  `ID` int(11) NOT NULL,
+  `Name` varchar(255) DEFAULT NULL,
+   `Age` int(11) DEFAULT NULL,
+  `Salary` int(11) DEFAULT NULL);
+  
+  CREATE TABLE `Orders` (
+  `Number` int(11) NOT NULL,
+  `order_date` varchar(255) DEFAULT NULL,
+   `cust_id` int(11) DEFAULT NULL,
+  `salesperson_id` int(11) DEFAULT NULL,
+  `Amount` int(11) DEFAULT NULL);
+  
+CREATE TABLE `Starbucks_Employees` (
+  `ID` int(11) NOT NULL,
+  `Name` varchar(255) DEFAULT NULL,
+   `Age` int(11) DEFAULT NULL,
+  `HourlyRate` int(11) DEFAULT NULL,
+  `StoreID` int(11) DEFAULT NULL);
+  
+ CREATE TABLE `Starbucks_Stores` (
+  `store_id` int(11) NOT NULL,
+  `city` varchar(255) DEFAULT NULL);
