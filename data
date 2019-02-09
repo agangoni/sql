@@ -9,14 +9,6 @@ VALUES
     (11,'Joe',38,38000);
 
 
-CREATE TABLE `Orders` (
-  `Number` int(11) NOT NULL,
-  `order_date` varchar(255) DEFAULT NULL,
-   `cust_id` int(11) DEFAULT NULL,
-  `salesperson_id` int(11) DEFAULT NULL,
-  `Amount` int(11) DEFAULT NULL);
-
-
 INSERT INTO `Orders`
     (`Number`, `order_date`, `cust_id`, `salesperson_id`, `Amount`)
 VALUES
