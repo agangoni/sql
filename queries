@@ -3,3 +3,6 @@ FROM Orders, Salesperson
 WHERE Orders.salesperson_id = Salesperson.ID
 GROUP BY salesperson_id, Name
 HAVING COUNT( salesperson_id ) >1;
+
+
+SELECT max(Salary) FROM [Salesperson] where Salary!= (SELECT max(Salary) FROM [Salesperson]);
