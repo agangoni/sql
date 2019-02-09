@@ -27,3 +27,10 @@ CREATE TABLE `Starbucks_Employees` (
   `Name` varchar(255) DEFAULT NULL,
    `cust_id` varchar(255) DEFAULT NULL,
   `Industry Type` varchar(255) DEFAULT NULL);
+  
+  CREATE TABLE `Salesperson` (
+  `ID` int(11) NOT NULL,
+  `FirstName` varchar(255) DEFAULT NULL,
+  `SecondName` varchar(255) DEFAULT NULL,
+   `Gender` varchar(255) DEFAULT NULL,
+  `Salary` int(11) DEFAULT NULL);
