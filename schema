@@ -34,3 +34,11 @@ CREATE TABLE `Starbucks_Employees` (
   `SecondName` varchar(255) DEFAULT NULL,
    `Gender` varchar(255) DEFAULT NULL,
   `Salary` int(11) DEFAULT NULL);
+
+
+Create table _Employees
+(
+ EmployeeID int primary key,
+ EmployeeName varchar(50),
+ ManagerID int 
+);
