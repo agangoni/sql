@@ -62,3 +62,16 @@ VALUES
     (6, 'Mary', 'Lambeth' ,'Female' , 30000),
     (7, 'Valarie', 'Vikings' ,'Female' , 35000),
     (8, 'John', 'Stanmore' ,'Male' , 80000);
+    
+INSERT INTO _employees
+   ('EmployeeID','EmployeeName','ManagerID')
+VALUES
+    (2, 'Mark', 8),
+    (3, 'Steve', 8),
+    (4, 'Tom', 3),
+    (5, 'Lara', 8),
+    (6, 'Simon', 2),
+    (7, 'David', 4),
+    (8, 'Ben', NULL),
+    (9, 'Stacy', 2),
+    (10,'Sam', 5);
