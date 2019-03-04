@@ -66,6 +66,7 @@ VALUES
 INSERT INTO _employees
    ('EmployeeID','EmployeeName','ManagerID')
 VALUES
+    (1, 'John', 5),
     (2, 'Mark', 8),
     (3, 'Steve', 8),
     (4, 'Tom', 3),
