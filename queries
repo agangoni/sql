@@ -23,3 +23,19 @@ select distinct salary from salesperson order by salary desc limit 1 offset n-1;
 select max(salary) from salesperson where salary not in (select max(salary) from salesperson);
 
 
+-- EmployeeId is passed, the query should list down the entire organization hierarchy 
+with recursive cte (EmployeeID, EmployeeName, ManagerID) as (
+  select     EmployeeID,
+             EmployeeName,
+             ManagerID
+  from       _Employees
+  where      ManagerID = 1
+  union all
+  select     emp.EmployeeID,
+             emp.EmployeeName,
+             emp.ManagerID
+  from       _Employees emp
+  inner join cte
+          on emp.ManagerID = cte.EmployeeID
+)
+select * from cte;
