@@ -1,0 +1,23 @@
+Pivot the Occupation column in OCCUPATIONS so that each Name is sorted alphabetically and displayed underneath its corresponding Occupation. The output column headers should be Doctor, Professor, Singer, and Actor, respectively.
+
+Note: Print NULL when there are no more names corresponding to an occupation.
+
+Occupations
+-----------
+Name : string
+occupation : string
+
+set @d=0,@p=0,@s=0,@a=0;
+select min(d), max(p), max(s), max(a) from
+(select 
+case
+when occupation = 'Doctor' then @d:=@d+1
+when occupation = 'Professor' then @p:=@p+1
+when occupation = 'Singer' then @s:=@s+1
+when occupation = 'Actor' then @a:=@a+1
+end as num,
+case when occupation = 'Doctor' then name end as d,
+case when occupation = 'Professor' then name end as p,
+case when occupation = 'Singer' then name end as s,
+case when occupation = 'Actor' then name end as a
+from occupations order by name) ata group by num
