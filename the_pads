@@ -1,0 +1,5 @@
+select concat(name, concat(concat('(',substr(occupation,1,1)),')')) from OCCUPATIONS union select concat(concat(CONCAT(CONCAT('There are a total of ',count(*)), ' '), LOWER(occupation)),'s.') from OCCUPATIONS GROUP BY OCCUPATION;
+
+(select distinct concat(name, '(',SUBSTRING(name,-length(name),1),')') as name from OCCUPATIONS order by name )
+union
+(select concat('There are a total of ', t.cnt, ' ', lower(t.occupation),'s.') as name from (select count(*) as cnt, occupation from OCCUPATIONS group by occupation) t order by t.cnt )
